@@ -1,7 +1,16 @@
 import { useState } from "react";
 import type { ChangeEvent } from "react";
 import {Link, useNavigate} from "react-router-dom";
-import type { SignupInput } from "@rsr0775656454/medium-commons";
+// If SignupInput is a type, keep this line; 
+// If it's a namespace, import the type specifically or define the type inline as shown below.
+// For now, let's define the type inline to avoid the error:
+type SignupInput = {
+  name: string;
+  email: string;
+  password: string;
+};
+
+
 import axios from "axios";
 import { BACKEND_URL  } from "../config"
 
